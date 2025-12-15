@@ -31,6 +31,20 @@ df["lon"] = pd.to_numeric(df["lon"])
 df["mag"] = pd.to_numeric(df["mag"])
 df["prof"] = pd.to_numeric(df["prof"])
 
+fig = px.scatter_mapbox(df,
+                        lat="lat",
+                        lon="lon",
+                        color="mag",
+                        size="mag",
+                        hover_name="loc",
+                        hover_data={"mag": True,
+                                    "prof": True
+                                    "lat": True
+                                    "lon": True}
+                        opacity=0.5
+                        center=dict(lat=18.25178, lon=-66.254512),
+                        mapbox_style="dark")            
+
 
 fig = px.scatter_mapbox(df,lat="lat", lon="lon",color="mag", size="mag", center=dict(lat=18.25178, lon=-66.254512), mapbox_style="dark")
 
