@@ -38,8 +38,8 @@ fig = px.scatter_mapbox(df,
                         size="mag",
                         hover_name="loc",
                         hover_data={"mag": True,
-                                    "prof": True
-                                    "lat": True
+                                    "prof": True,
+                                    "lat": True,
                                     "lon": True}
                         opacity=0.5
                         center=dict(lat=18.25178, lon=-66.254512),
